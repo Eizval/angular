@@ -20,22 +20,22 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Checkout
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18.x.x
-        cache: 'npm'
-    - name: Install
-    - run: npm ci
-    - run: npm run test -- --watch=false --browsers=ChromeHeadless
-    - run: npm run build -- -c production --base-href "https://Eizval.github.io/angular/"
+      - name: Checkout
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x.x
+          cache: 'npm'
+      - name: Install
+      - run: npm ci
+      - run: npm run test -- --watch=false --browsers=ChromeHeadless
+      - run: npm run build -- -c production --base-href "https://Eizval.github.io/angular/"
 
     
-    - name: Upload Pages artifact
-      uses: actions/upload-pages-artifact@v2
-      with:
-        path: dist/
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: dist/
   
 
