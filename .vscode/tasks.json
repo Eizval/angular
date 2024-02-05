@@ -3,6 +3,40 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "npm install",
+      "type": "npm",
+      "script": "install",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": false,
+        "showReuseMessage": true,
+        "close": true
+      },
+      "isBackground": true
+    },
+    {
+      "label": "install extension",
+      "type": "shell",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "reveal": "never",
+        "focus": false,
+        "showReuseMessage": true,
+        "close": true
+      },
+      "isBackground": true,
+      "command":[
+        "code --install-extension alexiv.vscode-angular2-files",
+        "code --uninstall-extension GitHub.copilot",
+
+      ]
+    },
+    {
       "type": "npm",
       "script": "start",
       "isBackground": true,
