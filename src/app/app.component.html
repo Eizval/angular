@@ -1,4 +1,24 @@
 <h1>Hello</h1>
-<app-example-a></app-example-a>
+<nav> 
 
+    <ul>
+        <li>
+            <a [routerLink]="['/ExampleAComponent']" routerLinkActive="active" ariaCurrentWhenActive="page">ExampleAComponent</a>
+        </li>
+        <li>
+            <a [routerLink]="['/ExampleBComponent']" routerLinkActive="active" ariaCurrentWhenActive="page">ExampleBComponent</a>
+        </li>
+        <li>
+            <a [routerLink]="['/ExampleCComponent']" routerLinkActive="active" ariaCurrentWhenActive="page">ExampleCComponent</a>
+        </li>
+        <li>
+            <a [routerLink]="['/ExampleOne']" routerLinkActive="active" ariaCurrentWhenActive="page">ExampleOne</a>
+        </li>
+    </ul>
+
+</nav>
+<app-example-a></app-example-a>
+<app-dropdown></app-dropdown>
 <app-example-a [customName]="'HansPeter'"></app-example-a>
+
+<router-outlet></router-outlet>

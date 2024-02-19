@@ -2,25 +2,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-import { Component } from '@angular/core';
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { DropdownComponent } from './dropdown.component';
 
-import { ExampleCComponent } from './example-c.component';
-
-describe('ExampleCComponent', () => {
-  let component: ExampleCComponent;
-  let fixture: ComponentFixture<ExampleCComponent>;
+describe('DropdownComponent', () => {
+  let component: DropdownComponent;
+  let fixture: ComponentFixture<DropdownComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExampleCComponent ]
+      declarations: [ DropdownComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExampleCComponent);
+    fixture = TestBed.createComponent(DropdownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -29,4 +26,3 @@ describe('ExampleCComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
