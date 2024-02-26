@@ -1,24 +1,39 @@
-<h1>Hello</h1>
 <nav> 
 
     <ul>
         <li>
-            <a [routerLink]="['/ExampleAComponent']" routerLinkActive="active" ariaCurrentWhenActive="page">ExampleAComponent</a>
+            <a [routerLink]="['/HomePage']" routerLinkActive="active" ariaCurrentWhenActive="page">HomePage</a>
         </li>
         <li>
-            <a [routerLink]="['/ExampleBComponent']" routerLinkActive="active" ariaCurrentWhenActive="page">ExampleBComponent</a>
+            <a [routerLink]="['/SQL']" routerLinkActive="active" ariaCurrentWhenActive="page">SQL</a>
+        </li>
+        <li>
+            <a [routerLink]="['/ExampleAComponent']" routerLinkActive="active" ariaCurrentWhenActive="page">ExampleAComponent</a>
         </li>
         <li>
             <a [routerLink]="['/ExampleCComponent']" routerLinkActive="active" ariaCurrentWhenActive="page">ExampleCComponent</a>
         </li>
         <li>
-            <a [routerLink]="['/ExampleOne']" routerLinkActive="active" ariaCurrentWhenActive="page">ExampleOne</a>
+            <a [routerLink]="['/ExampleOne']" routerLinkActive="active" ariaCurrentWhenActive="page">Rating</a>
+        </li>
+        <li>
+            <a  href="https://unormal.org/bfo" routerLinkActive="active" ariaCurrentWhenActive="page" target="_blank">Unormal</a>
+        </li>
+        <li>
+            <a  href="https://rufus.ie/de/" routerLinkActive="active" ariaCurrentWhenActive="page" target="_blank">Boot Stick</a>
+        </li>
+        <li>
+            <a  [routerLink]="['/CloneZilla']" routerLinkActive="active" ariaCurrentWhenActive="page">Clone Zilla</a>
         </li>
     </ul>
 
 </nav>
-<app-example-a></app-example-a>
-<app-dropdown></app-dropdown>
-<app-example-a [customName]="'HansPeter'"></app-example-a>
 
-<router-outlet></router-outlet>
+
+<body>
+
+  
+    <router-outlet></router-outlet>
+    
+    
+</body>
