@@ -6,8 +6,10 @@ import { ExampleOneComponent } from './shared/example-one/example-one.component'
 import { HomepageComponent } from './shared/homepage/homepage.component';
 import { SqlComponent } from './shared/sql/sql.component';
 import { CloneZillaComponent } from './shared/clone-zilla/clone-zilla.component';
+import { LoginComponent } from './shared/login/login.component';
 
 export const routes: Routes = [
+  { path: '', component: LoginComponent  },
   { path: 'ExampleAComponent', component: ExampleAComponent  },
   { path: 'ExampleBComponent', component: ExampleBComponent  },
   { path: 'ExampleCComponent', component: ExampleCComponent  },
@@ -15,4 +17,5 @@ export const routes: Routes = [
   { path: 'HomePage', component: HomepageComponent  },
   { path: 'SQL', component: SqlComponent  },
   { path: 'CloneZilla', component: CloneZillaComponent  },
+  { path: 'Login', component: LoginComponent  },
 ];
