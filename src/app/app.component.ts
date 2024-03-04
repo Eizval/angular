@@ -4,6 +4,7 @@ import { TestComponent } from './test/test.component';
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { HighlightAutoResult, HighlightLoader, HighlightModule } from 'ngx-highlightjs';
+import { LoginService } from './shared/login/login.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,11 @@ import { HighlightAutoResult, HighlightLoader, HighlightModule } from 'ngx-highl
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  response!: HighlightAutoResult;
+  public response!: HighlightAutoResult;
+
+  public constructor(public loginService: LoginService){
+    
+  }
 
   code = `function myFunction() {
   document.getElementById("demo1").innerHTML = "Test 1!";

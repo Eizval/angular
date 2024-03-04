@@ -1,6 +1,6 @@
 <nav> 
 
-    <ul>
+    <ul *ngIf="loginService.isLoggedIn">
         <li>
             <a [routerLink]="['/HomePage']" routerLinkActive="active" ariaCurrentWhenActive="page">HomePage</a>
         </li>

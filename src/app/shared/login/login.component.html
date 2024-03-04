@@ -1,12 +1,57 @@
-<h1>Login</h1>
+<div id="login">
 
-<p>Username</p>
-<input type="text" id="Username" required> <br>
+<form [formGroup]="loginForm" (ngSubmit)="save()">
 
-<p>Password</p>
-<input type="password" id="password" required>
+    <h1>Login</h1>
+    
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input formControlName="username" type="text" class="form-control" required > <br>
+    </div>
+    
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input formControlName="password" type="text" class="form-control" required > <br>
+    </div>
+    
+    <button type="submit">Login</button> <br>
 
-<p>Password confirm</p>
-<input type="password" id="passconfirm" required> <br> <br>
+    <button (click)="loginService.setIsLoggedIn(false)">Logout</button>
+    
+</form>
+<!-- <p *ngIf="isloggedin">True</p> -->
+<p>{{ loginService.isLoggedIn }}</p>
 
-<button type="submit">Submit</button>
+
+<!-- <script>
+    var username = document.getElementById("Username").ariaValueText;
+    var password = document.getElementById("password").ariaValueText;
+    var isloggedin = false;
+    var isAdmin = false;
+
+    if(username == "guest" && password == "guest"){
+        isloggedin = true
+
+    } else if (username == "admin_damian" && password == ""){
+
+    } else {
+
+    }
+
+
+    function save(){
+        if (isloggedin){
+            localStorage.setItem("Username", username, "password", password, "Login", isloggedin, "Admin", isAdmin)
+        } else {
+            alert("You have not the correct username or password")
+        }
+    }
+
+
+
+
+
+</script> -->
+
+
+</div>

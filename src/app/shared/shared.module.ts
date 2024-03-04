@@ -6,27 +6,33 @@ import { ExampleCComponent } from './example-c/example-c.component';
 import { NgbAlertModule, NgbDropdownModule, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { ExampleOneComponent } from './example-one/example-one.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
     CommonModule,
     NgbAlertModule,
     NgbDropdownModule,
-    NgbRatingModule
+    NgbRatingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     ExampleAComponent,
     ExampleBComponent,
     ExampleCComponent,
     DropdownComponent,
-    ExampleOneComponent
+    ExampleOneComponent,
+    LoginComponent
   ],
   exports: [
     ExampleAComponent,
     ExampleBComponent,
     ExampleCComponent,
     DropdownComponent,
-    ExampleOneComponent
+    ExampleOneComponent,
+    LoginComponent
   ]
 })
 export class SharedModule {

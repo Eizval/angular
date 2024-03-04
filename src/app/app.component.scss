@@ -16,11 +16,19 @@ li{
 }
 
 ul {
-    background-color: rgb(21, 88, 68);
+    background-color: rgb(59, 0, 73);
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
 }
 
 a{
     text-decoration: none;
     font-size: large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+}
+
+input{
+    background-color: black;
+    color: rgb(0, 255, 255);
 }

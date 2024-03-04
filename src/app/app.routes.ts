@@ -7,15 +7,16 @@ import { HomepageComponent } from './shared/homepage/homepage.component';
 import { SqlComponent } from './shared/sql/sql.component';
 import { CloneZillaComponent } from './shared/clone-zilla/clone-zilla.component';
 import { LoginComponent } from './shared/login/login.component';
+import { yourGuardGuard } from './your-guard.guard';
 
 export const routes: Routes = [
   { path: '', component: LoginComponent  },
-  { path: 'ExampleAComponent', component: ExampleAComponent  },
-  { path: 'ExampleBComponent', component: ExampleBComponent  },
-  { path: 'ExampleCComponent', component: ExampleCComponent  },
-  { path: 'ExampleOne', component: ExampleOneComponent  },
+  { path: 'ExampleAComponent', component: ExampleAComponent, canActivate: [yourGuardGuard]  },
+  { path: 'ExampleBComponent', component: ExampleBComponent, canActivate: [yourGuardGuard]  },
+  { path: 'ExampleCComponent', component: ExampleCComponent, canActivate: [yourGuardGuard]  },
+  { path: 'ExampleOne', component: ExampleOneComponent, canActivate: [yourGuardGuard]  },
   { path: 'HomePage', component: HomepageComponent  },
-  { path: 'SQL', component: SqlComponent  },
-  { path: 'CloneZilla', component: CloneZillaComponent  },
+  { path: 'SQL', component: SqlComponent, canActivate: [yourGuardGuard]  },
+  { path: 'CloneZilla', component: CloneZillaComponent, canActivate: [yourGuardGuard]  },
   { path: 'Login', component: LoginComponent  },
 ];
