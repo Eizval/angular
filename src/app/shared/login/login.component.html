@@ -11,17 +11,22 @@
     
     <div class="form-group">
         <label for="password">Password</label>
-        <input formControlName="password" type="text" class="form-control" required > <br>
+        <input formControlName="password" type="password" class="form-control" required > <br>
     </div>
     
-    <button type="submit">Login</button> <br>
-
-    <button (click)="loginService.setIsLoggedIn(false)">Logout</button>
+    <button class="submit" type="submit">Login</button> <br> <br>
+    <button class="submit" (click)="loginService.setIsLoggedIn(false)">Logout</button> <br>
     
 </form>
 <!-- <p *ngIf="isloggedin">True</p> -->
-<p>{{ loginService.isLoggedIn }}</p>
+<p><strong>{{ loginService.isLoggedIn }}</strong></p>
+<div>
 
+    <h2>Login Data</h2>
+    <!-- <p><strong  [innerHTML]="showUserData()" id="Data" >Will be displayed</strong></p> -->
+
+    <button id="Data" (click)="showUserData()" class="submit" >Klick me to see who you are</button>
+</div>
 
 <!-- <script>
     var username = document.getElementById("Username").ariaValueText;

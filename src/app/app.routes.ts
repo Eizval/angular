@@ -8,6 +8,8 @@ import { SqlComponent } from './shared/sql/sql.component';
 import { CloneZillaComponent } from './shared/clone-zilla/clone-zilla.component';
 import { LoginComponent } from './shared/login/login.component';
 import { yourGuardGuard } from './your-guard.guard';
+import { PasswordComponent } from './shared/password/password.component';
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
   { path: '', component: LoginComponent  },
@@ -19,4 +21,5 @@ export const routes: Routes = [
   { path: 'SQL', component: SqlComponent, canActivate: [yourGuardGuard]  },
   { path: 'CloneZilla', component: CloneZillaComponent, canActivate: [yourGuardGuard]  },
   { path: 'Login', component: LoginComponent  },
+  { path: 'Password', component: PasswordComponent, canActivate: [authGuard] },
 ];
