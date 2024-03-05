@@ -14,7 +14,7 @@
         <input formControlName="password" type="password" class="form-control" required > <br>
     </div>
     
-    <button class="submit" type="submit">Login</button> <br> <br>
+    <button class="submit" type="submit" (click)="saveLoginData()">Login</button> <br> <br>
     <button class="submit" (click)="loginService.setIsLoggedIn(false)">Logout</button> <br>
     
 </form>

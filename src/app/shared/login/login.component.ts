@@ -70,7 +70,7 @@ export class LoginComponent implements OnInit {
   }
 
   public showUserData(){
-    const usernameData = this.loginForm.controls.username.value;
+    const usernameData = localStorage.getItem('username');
     if(this.loginService.isLoggedIn){
       document.getElementById("Data")!!.innerHTML = `${usernameData}`;
       return usernameData;
@@ -79,6 +79,11 @@ export class LoginComponent implements OnInit {
       return null
     }
 
+  }
+
+  public saveLoginData(){
+    const usernameData = this.loginForm.controls.username.value;
+    localStorage.setItem('username', usernameData)
   }
 
 }
