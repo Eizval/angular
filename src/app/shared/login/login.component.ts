@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     
       if(canLogin && !isAdmin){
         this.loginService.setIsLoggedIn(true);
-        localStorage.setItem('isAdmin', 'true');
+        localStorage.setItem('isAdmin', 'false');
       } else if (canLogin && isAdmin){
         this.loginService.setIsLoggedIn(true);
         localStorage.setItem('isAdmin', 'true');

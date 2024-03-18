@@ -8,13 +8,13 @@
             <a [routerLink]="['/SQL']" routerLinkActive="active" ariaCurrentWhenActive="page">SQL</a>
         </li>
         <li>
-            <a [routerLink]="['/ExampleAComponent']" routerLinkActive="active" ariaCurrentWhenActive="page">ExampleAComponent</a>
+            <a [routerLink]="['/ExampleAComponent']" routerLinkActive="active" ariaCurrentWhenActive="page">Warning</a>
         </li>
         <li>
-            <a [routerLink]="['/ExampleCComponent']" routerLinkActive="active" ariaCurrentWhenActive="page">ExampleCComponent</a>
+            <a [routerLink]="['/ExampleCComponent']" routerLinkActive="active" ariaCurrentWhenActive="page">Dropdown</a>
         </li>
         <li>
-            <a [routerLink]="['/ExampleOne']" routerLinkActive="active" ariaCurrentWhenActive="page">Rating</a>
+            <a [routerLink]="['/ExampleOne']" routerLinkActive="active" ariaCurrentWhenActive="page">Rate us</a>
         </li>
         <li>
             <a  href="https://unormal.org/bfo" routerLinkActive="active" ariaCurrentWhenActive="page" target="_blank">Unormal</a>
@@ -28,10 +28,22 @@
         <li>
             <a  [routerLink]="['/Login']" routerLinkActive="active" ariaCurrentWhenActive="page">Login/out</a>
         </li>
+        <li *ngIf="loginService.isAdmin">
+            <a href="">Manhwa</a>
+        </li>
+        <li>
+            <a href="">FFF</a>
+        </li>
     </ul>
 
 
+    
+        
+        
+    
+    
 </nav>
+
 
 
 <body>
